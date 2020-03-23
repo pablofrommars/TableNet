@@ -14,7 +14,7 @@ Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
 ## Install
 
 * Add Table.Net [nuget package](https://www.nuget.org/packages/TableNet/)
-* Reference static assets ```<link href="_content/Table.Net/css/main.css" rel="stylesheet" />```
+* Reference static assets: ```<link href="_content/Table.Net/css/main.css" rel="stylesheet" />```
 
 ## Dependencies
 
