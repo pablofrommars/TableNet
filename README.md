@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/github/license/BlazorExtensions/Storage.svg?longCache=true&style=flat-square)](https://github.com/pablofrommars/TableNet/blob/master/LICENSE)
+[![Package Version](https://img.shields.io/badge/nuget-v1.0.0-blue.svg?longCache=true&style=flat-square)](https://www.nuget.org/packages/Table.Net/1.0.0)
+
 # Table.Net
 
 Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
@@ -13,7 +16,7 @@ Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
 
 ## Install
 
-* Add Table.Net [nuget package](https://www.nuget.org/packages/TableNet/)
+* Add Table.Net [nuget package](https://www.nuget.org/packages/Table.Net)
 * Reference static assets: ```<link href="_content/Table.Net/css/main.css" rel="stylesheet" />```
 
 ## Dependencies
