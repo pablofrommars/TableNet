@@ -4,6 +4,20 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
     <LangVersion>preview</LangVersion>
+    <Owner>PabloFromMars</Owner>
+    <Authors>Pablo Belin</Authors>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Title>Table.Net - DataTable Blazor Component</Title>
+    <Description>Table.Net lets Data Scientists and Developers create flexible data tables for Blazor Web Apps</Description>
+    <Summary>Table.Net lets Data Scientists and Developers create flexible data tables for Blazor Web Apps</Summary>
+    <PackageTags>Blazor;DataTables;DataTable</PackageTags>
+    <RepositoryUrl>https://github.com/pablofrommars/TableNet</RepositoryUrl>
+    <PackageProjectUrl>https://pablofrommars.github.io/</PackageProjectUrl>
+    <Copyright>Copyright (c) 2020 Pablo Belin</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Product>Table.Net</Product>
+    <RepositoryType>git</RepositoryType>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

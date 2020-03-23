@@ -43,13 +43,13 @@ namespace Table.Net
         [Parameter]
         public bool Rounded { get; set; } = false;
 
-        private Type type = typeof(TItem);
+        private readonly Type type = typeof(TItem);
 
         private IList<TItem> items;
 
-        private Dictionary<string, PropertyInfo> properties = new Dictionary<string, PropertyInfo>();
+        private readonly Dictionary<string, PropertyInfo> properties = new Dictionary<string, PropertyInfo>();
 
-        private List<IColumn> filters = new List<IColumn>();
+        private readonly List<IColumn> filters = new List<IColumn>();
 
         protected override async Task OnInitializedAsync()
         {

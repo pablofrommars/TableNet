@@ -9,12 +9,12 @@
 <p>This component demonstrates fetching data from the server.</p>
 
 <div class="w-75 mt-5 mx-auto">
-    <Table Loader="Loader" Context="wf" OnRowClick=@(async (WeatherForecast wf) => await OnRowClick(wf)) Rounded="true">
+    <Table Loader="Loader" Context="wf" OnRowClick=@((WeatherForecast wf) => OnRowClick(wf)) Rounded="true">
         <Loading><p>Loading...</p></Loading>
         <Header>
             <Column Field="Date" Sortable="true" />
             <Column Field="TemperatureC" Label="Temp. (C)" Sortable="true" />
-            <Column Field="TemperatureF" Label="Temp. (F)" Sortable="true" />
+            <Column Field="TemperatureF" Label="Temp. (F)" Sortable="true" />
             <Column Field="Summary" Filterable="true" />
         </Header>
         <Row>
@@ -27,6 +27,8 @@
 </div>
 
 @code {
+    WeatherForecast[] toto;
+
     private async Task<IList<WeatherForecast>> Loader()
     {
         var json = await Http.GetStringAsync("data/weather.json");
@@ -34,10 +36,7 @@
         return JsonSerializer.Deserialize<WeatherForecast[]>(json);
     }
 
-    private async Task OnRowClick(WeatherForecast wf)
-    {
-        await Task.Yield();
-    }
+    private Task OnRowClick(WeatherForecast wf) => Task.CompletedTask;
 
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum Summary

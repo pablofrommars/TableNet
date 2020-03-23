@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29820.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table.Net", "Table.Net\Table.Net.csproj", "{26046F0F-6D3B-45A8-A100-17FF45BB1601}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table.Net", "Table.Net\Table.Net.csproj", "{26046F0F-6D3B-45A8-A100-17FF45BB1601}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{45B56F92-15AD-41E5-A331-1A4DD1EF9A32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo", "Demo\Demo.csproj", "{45B56F92-15AD-41E5-A331-1A4DD1EF9A32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
