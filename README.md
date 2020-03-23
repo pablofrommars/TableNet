@@ -88,3 +88,19 @@ Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
     private async Task<IList<WeatherForecast>> Loader() => ...;
 }
 ```
+
+## Parameters
+
+| Parameter | Default | Bootstrap |
+|:----------|:-------:|----------:|
+|Small|true|[table-sm](https://getbootstrap.com/docs/4.4/content/tables/#small-table)|
+|Dark|false|[table-dark](https://getbootstrap.com/docs/4.4/content/tables/#examples)|
+|HeadDark|false|[thead-dark](https://getbootstrap.com/docs/4.4/content/tables/#table-head-options)|
+|Striped|false|[table-striped](https://getbootstrap.com/docs/4.4/content/tables/#striped-rows)|
+|Hover|false|[table-hover](https://getbootstrap.com/docs/4.4/content/tables/#hoverable-rows)|
+|Rounded|false|[rounded](https://getbootstrap.com/docs/4.4/utilities/borders/#border-radius)|
+
+## Interactivity
+
+* OnRowClick: ```EventCallback<TItem>```
+
