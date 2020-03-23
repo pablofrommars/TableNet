@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29820.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table.Net", "Table.Net\Table.Net.csproj", "{26046F0F-6D3B-45A8-A100-17FF45BB1601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{45B56F92-15AD-41E5-A331-1A4DD1EF9A32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26046F0F-6D3B-45A8-A100-17FF45BB1601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26046F0F-6D3B-45A8-A100-17FF45BB1601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26046F0F-6D3B-45A8-A100-17FF45BB1601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26046F0F-6D3B-45A8-A100-17FF45BB1601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B56F92-15AD-41E5-A331-1A4DD1EF9A32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B56F92-15AD-41E5-A331-1A4DD1EF9A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B56F92-15AD-41E5-A331-1A4DD1EF9A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B56F92-15AD-41E5-A331-1A4DD1EF9A32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C8CA103-754D-451C-962D-725E28108ACC}
+	EndGlobalSection
+EndGlobal

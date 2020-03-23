@@ -1,0 +1,22 @@
+﻿.clickable {
+    cursor: pointer;
+}
+
+.sortable {
+    color: rgba(0,0,0,0.3);
+}
+
+    .sortable:hover {
+        color: inherit;
+    }
+
+.table-dark .sortable,
+.thead-dark .sortable {
+    color: rgba(255,255,255,0.5);
+}
+
+    .table-dark .sortable:hover,
+    .thead-dark .sortable:hover {
+        color: inherit;
+    }
+

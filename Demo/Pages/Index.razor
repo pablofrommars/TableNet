@@ -1,0 +1,61 @@
+﻿@page "/"
+@inject HttpClient Http
+
+@using System.Text.Json
+@using System.Text.Json.Serialization
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<div class="w-75 mt-5 mx-auto">
+    <Table Loader="Loader" Context="wf" OnRowClick=@(async (WeatherForecast wf) => await OnRowClick(wf)) Dark="true" Rounded="true">
+        <Loading><p>Loading...</p></Loading>
+        <Header>
+            <Column Field="Date" Sortable="true" />
+            <Column Field="TemperatureC" Label="Temp. (C)" Sortable="true" />
+            <Column Field="TemperatureF" Label="Temp. (F)" Sortable="true" />
+            <Column Field="Summary" Filterable="true" />
+        </Header>
+        <Row>
+            <Cell>@wf.Date.ToShortDateString()</Cell>
+            <Cell Align="Align.Right" >@wf.TemperatureC</Cell>
+            <Cell Align="Align.Right">@wf.TemperatureF</Cell>
+            <Cell Align="Align.Center">@wf.Summary</Cell>
+        </Row>
+    </Table>
+</div>
+
+@code {
+    private async Task<IList<WeatherForecast>> Loader()
+    {
+        var json = await Http.GetStringAsync("data/weather.json");
+
+        return JsonSerializer.Deserialize<WeatherForecast[]>(json);
+    }
+
+    private async Task OnRowClick(WeatherForecast wf)
+    {
+        await Task.Yield();
+    }
+
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public enum Summary
+    {
+        Balmy,
+        Bracing,
+        Chilly,
+        Freezing
+    }
+
+    public class WeatherForecast
+    {
+        public DateTime Date { get; set; }
+
+        public int TemperatureC { get; set; }
+
+        public Summary Summary { get; set; }
+
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}

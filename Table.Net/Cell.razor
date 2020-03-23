@@ -1,0 +1,9 @@
+﻿@{ 
+    var text = Align switch
+    {
+        Align.Left => "left",
+        Align.Right => "right",
+        _ => "center",
+    };
+}
+<td class="text-@text">@ChildContent</td>
