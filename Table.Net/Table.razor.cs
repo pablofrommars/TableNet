@@ -73,10 +73,7 @@ namespace Table.Net
             }
         }
 
-        public void Refresh()
-        {
-            StateHasChanged();
-        }
+        public void Refresh() => StateHasChanged();
 
         public void Sort(IColumn column)
         {
