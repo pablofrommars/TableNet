@@ -1,4 +1,4 @@
-﻿<th @onclick="Click" class="@(Sortable ? "clickable" : "")">
+﻿<th @onclick=Click class=@(Sortable ? "clickable" : "")>
     <div class="d-flex justify-content-between">
 
         @if (Sortable)
@@ -23,9 +23,9 @@
                 <a class="clickable" @onclick=@(_ => show = !show)><span class="fas fa-sm fa-filter"></span></a>
                 <div class="dropdown-menu @(show ? "show" : "")">
                     <form>
-                        <div class="dropdown-item" @onclick="All">
+                        <div class="dropdown-item" @onclick=All>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" checked="@all">
+                                <input class="form-check-input" type="checkbox" checked=@all>
                                 <label class="form-check-label">Select All</label>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         {
                             <div class="dropdown-item" @onclick=@(_ => Filter(filter.Key))>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" checked="@filter.Value">
+                                    <input class="form-check-input" type="checkbox" checked=@filter.Value>
                                     <label class="form-check-label">@filter.Key</label>
                                 </div>
                             </div>

@@ -6,7 +6,7 @@
 }
 else
 {
-    <CascadingValue Value="@this">
+    <CascadingValue Value=@this>
         <table class="table @(Small ? "table-sm" : "") @(Dark ? "table-dark" : "") @(Striped ? "table-striped" : "") @(Hover ? "table-hover" : "") @(Rounded ? "rounded" : "")">
             <thead class="@(HeadDark ? "thead-dark" : "")">
                 <tr>@Header</tr>
@@ -16,7 +16,7 @@ else
                 {
                     @if (OnRowClick.HasDelegate)
                     {
-                        <tr class="clickable" @onclick="@(async () => await OnRowClick.InvokeAsync(item))">@Row(item)</tr>
+                        <tr class="clickable" @onclick=@(async () => await OnRowClick.InvokeAsync(item))>@Row(item)</tr>
                     }
                     else
                     {
