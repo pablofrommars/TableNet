@@ -14,6 +14,8 @@ namespace Table.Net
 
         bool Filterable { get; }
 
+        int Sort { get; }
+
         #endregion
 
         #region Filter

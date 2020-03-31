@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/github/license/BlazorExtensions/Storage.svg?longCache=true&style=flat-square)](https://github.com/pablofrommars/TableNet/blob/master/LICENSE)
-[![Package Version](https://img.shields.io/badge/nuget-v1.0.1-blue.svg?longCache=true&style=flat-square)](https://www.nuget.org/packages/Table.Net/1.0.1)
+[![Package Version](https://img.shields.io/badge/nuget-v1.0.3-blue.svg?longCache=true&style=flat-square)](https://www.nuget.org/packages/Table.Net/1.0.3)
 
 # Table.Net
 
@@ -71,7 +71,7 @@ Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
 <Table Loader=Loader Context="wf" Dark=true Rounded=true>
     <Loading><p>Loading...</p></Loading>
     <Header>
-        <Column Field="Date" Sortable=true />
+        <Column Field="Date" Sortable=true Sort="-1" />
         <Column Field="TemperatureC" Label="Temp. (C)" Sortable=true />
         <Column Field="TemperatureF" Label="Temp. (F)" Sortable=true />
         <Column Field="Summary" Filterable=true />

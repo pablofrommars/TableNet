@@ -12,7 +12,7 @@
     <Table Loader=Loader Context="wf" OnRowClick=@((WeatherForecast wf) => OnRowClick(wf)) Rounded=true>
         <Loading><p>Loading...</p></Loading>
         <Header>
-            <Column Field="Date" Sortable=true />
+            <Column Field="Date" Sortable=true Sort="-1"/>
             <Column Field="TemperatureC" Label="Temp. (C)" Sortable=true />
             <Column Field="TemperatureF" Label="Temp. (F)" Sortable=true />
             <Column Field="Summary" Filterable=true />

@@ -15,4 +15,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Table.Net\Table.Net.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\data\weather.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

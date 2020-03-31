@@ -51,16 +51,29 @@ namespace Table.Net
 
         private readonly List<IColumn> filters = new List<IColumn>();
 
+        protected override void OnParametersSet()
+        {
+            base.OnParametersSet();
+        }
+
         protected override async Task OnInitializedAsync()
         {
             items = await Loader();
         }
 
+        private IColumn defaultColumn;
+
         public void Register(IColumn column)
         {
-            if (column.Sortable || column.Filterable)
+            if (column.Sortable || column.Sort != 0 || column.Filterable)
             {
                 var info = type.GetProperty(column.Field);
+
+                if (column.Sort != 0)
+                {
+                    defaultColumn = column;
+                    CurrentSorting = (defaultColumn, defaultColumn.Sort == -1);
+                }
 
                 if (column.Filterable && info.PropertyType.IsEnum)
                 {
@@ -73,24 +86,40 @@ namespace Table.Net
             }
         }
 
+        private bool first = true;
+
         public void Refresh() => StateHasChanged();
 
         public void Sort(IColumn column)
         {
-            if (CurrentSorting.column == column)
+            if (column == defaultColumn)
             {
-                if (CurrentSorting.descending)
-                {
-                    CurrentSorting = (null, false);
-                }
-                else
-                {
-                    CurrentSorting = (column, true);
-                }
+                CurrentSorting = (defaultColumn, !CurrentSorting.descending);
             }
             else
             {
-                CurrentSorting = (column, false);
+                if (CurrentSorting.column == column)
+                {
+                    if (CurrentSorting.descending)
+                    {
+                        if (defaultColumn == null)
+                        {
+                            CurrentSorting = (null, false);
+                        }
+                        else
+                        {
+                            CurrentSorting = (defaultColumn, defaultColumn.Sort == -1);
+                        }
+                    }
+                    else
+                    {
+                        CurrentSorting = (column, true);
+                    }
+                }
+                else
+                {
+                    CurrentSorting = (column, false);
+                }
             }
 
             Refresh();
@@ -130,18 +159,16 @@ namespace Table.Net
                 {
                     return data;
                 }
+
+                var property = properties[CurrentSorting.column.Field];
+
+                if (CurrentSorting.descending)
+                {
+                    return data.OrderByDescending(o => property.GetValue(o));
+                }
                 else
                 {
-                    var property = properties[CurrentSorting.column.Field];
-
-                    if (CurrentSorting.descending)
-                    {
-                        return data.OrderByDescending(o => property.GetValue(o));
-                    }
-                    else
-                    {
-                        return data.OrderBy(o => property.GetValue(o));
-                    }
+                    return data.OrderBy(o => property.GetValue(o));
                 }
             }
         }

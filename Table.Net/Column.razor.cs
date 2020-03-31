@@ -22,6 +22,9 @@ namespace Table.Net
         [Parameter]
         public bool Filterable { get; set; }
 
+        [Parameter]
+        public int Sort { get; set; }
+
         private bool show = false;
 
         private Dictionary<object, bool> filters;

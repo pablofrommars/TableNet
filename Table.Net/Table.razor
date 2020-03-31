@@ -12,15 +12,23 @@ else
                 <tr>@Header</tr>
             </thead>
             <tbody>
-                @foreach (var item in Data)
+                @if (first)
                 {
-                    @if (OnRowClick.HasDelegate)
+                    first = false;
+                    StateHasChanged();
+                }
+                else
+                {
+                    @foreach (var item in Data)
                     {
-                        <tr class="clickable" @onclick=@(async () => await OnRowClick.InvokeAsync(item))>@Row(item)</tr>
-                    }
-                    else
-                    {
-                        <tr>@Row(item)</tr>
+                        if (OnRowClick.HasDelegate)
+                        {
+                            <tr @key=item class="clickable" @onclick=@(async () => await OnRowClick.InvokeAsync(item))>@Row(item)</tr>
+                        }
+                        else
+                        {
+                            <tr @key=item>@Row(item)</tr>
+                        }
                     }
                 }
             </tbody>
