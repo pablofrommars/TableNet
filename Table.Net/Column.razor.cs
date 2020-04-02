@@ -25,6 +25,12 @@ namespace Table.Net
         [Parameter]
         public int Sort { get; set; }
 
+        [Parameter]
+        public string Tooltip { get; set; }
+
+        [Parameter]
+        public string TooltipPlacement { get; set; } = "center";
+
         private bool show = false;
 
         private Dictionary<object, bool> filters;
@@ -45,7 +51,7 @@ namespace Table.Net
         {
             if (Sortable)
             {
-                Table.Sort(this);
+                Table.Set(this);
             }
         }
 

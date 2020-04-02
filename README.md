@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/github/license/BlazorExtensions/Storage.svg?longCache=true&style=flat-square)](https://github.com/pablofrommars/TableNet/blob/master/LICENSE)
-[![Package Version](https://img.shields.io/badge/nuget-v1.0.3-blue.svg?longCache=true&style=flat-square)](https://www.nuget.org/packages/Table.Net/1.0.3)
+[![Package Version](https://img.shields.io/badge/nuget-v1.0.5-blue.svg?longCache=true&style=flat-square)](https://www.nuget.org/packages/Table.Net/1.0.5)
 
 # Table.Net
 
@@ -12,6 +12,7 @@ Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
 * Flexible design
 * Sorting
 * Filtering
+* Tooltip
 * Asynchronous
 
 ## Install
@@ -89,7 +90,7 @@ Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
 }
 ```
 
-## Parameters
+## Styling Parameters
 
 | Parameter | Default | Bootstrap |
 |:----------|:-------:|----------:|
@@ -104,3 +105,14 @@ Blazor DataTable Component ([Demo](https://pablofrommars.github.io/covid19))
 
 * OnRowClick: ```EventCallback<TItem>```
 
+## Columns
+
+| Parameter | Default |  Description |
+|:----------|:-------:|:--|
+|Field||Name of property in `TItem`|
+|Label||Header override, `Field` is used by default|
+|Sortable| false | Allows sorting |
+|Filterable| false | Allows filtering |
+| Sort | 0 | Indicates default sorting (-1 for descending, 1 for ascending) |
+| Tooltip || Information text displayed on column hover |
+| TooltipPlacement | center | left, center or right |

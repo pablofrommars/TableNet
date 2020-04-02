@@ -9,13 +9,49 @@
 <p>This component demonstrates fetching data from the server.</p>
 
 <div class="w-75 mt-5 mx-auto">
-    <Table Loader=Loader Context="wf" OnRowClick=@((WeatherForecast wf) => OnRowClick(wf)) Rounded=true>
+    <Table Loader=Loader Context="wf" OnRowClick=@((WeatherForecast wf) => OnRowClick(wf)) Sort="-1" Rounded=true>
         <Loading><p>Loading...</p></Loading>
         <Header>
-            <Column Field="Date" Sortable=true Sort="-1"/>
-            <Column Field="TemperatureC" Label="Temp. (C)" Sortable=true />
+            <Column Field="Date" Sortable=true Sort="-1" Tooltip="Hello, World" TooltipPlacement="right" />
+            <Column Field="TemperatureC" Label="Temp. (C)" Sortable=true Tooltip="Hello, World" />
             <Column Field="TemperatureF" Label="Temp. (F)" Sortable=true />
-            <Column Field="Summary" Filterable=true />
+            <Column Field="Summary" Filterable=true Tooltip="Hello, World" TooltipPlacement="left" />
+        </Header>
+        <Row>
+            <Cell>@wf.Date.ToShortDateString()</Cell>
+            <Cell Align=Align.Right>@wf.TemperatureC</Cell>
+            <Cell Align=Align.Right>@wf.TemperatureF</Cell>
+            <Cell Align=Align.Center>@wf.Summary</Cell>
+        </Row>
+    </Table>
+</div>
+
+<div class="w-75 mt-5 mx-auto">
+    <Table Loader=Loader Context="wf" OnRowClick=@((WeatherForecast wf) => OnRowClick(wf)) Sort="-1" Rounded=true HeadDark=true>
+        <Loading><p>Loading...</p></Loading>
+        <Header>
+            <Column Field="Date" Sortable=true Sort="-1" />
+            <Column Field="TemperatureC" Label="Temp. (C)" Sortable=true Tooltip="Hello, World" />
+            <Column Field="TemperatureF" Label="Temp. (F)" Sortable=true />
+            <Column Field="Summary" Filterable=true Tooltip="Hello, World" />
+        </Header>
+        <Row>
+            <Cell>@wf.Date.ToShortDateString()</Cell>
+            <Cell Align=Align.Right>@wf.TemperatureC</Cell>
+            <Cell Align=Align.Right>@wf.TemperatureF</Cell>
+            <Cell Align=Align.Center>@wf.Summary</Cell>
+        </Row>
+    </Table>
+</div>
+
+<div class="w-75 mt-5 mx-auto">
+    <Table Loader=Loader Context="wf" OnRowClick=@((WeatherForecast wf) => OnRowClick(wf)) Sort="-1" Rounded=true Dark=true>
+        <Loading><p>Loading...</p></Loading>
+        <Header>
+            <Column Field="Date" Sortable=true Sort="-1" />
+            <Column Field="TemperatureC" Label="Temp. (C)" Sortable=true Tooltip="Hello, World" />
+            <Column Field="TemperatureF" Label="Temp. (F)" Sortable=true />
+            <Column Field="Summary" Filterable=true Tooltip="Hello, World" />
         </Header>
         <Row>
             <Cell>@wf.Date.ToShortDateString()</Cell>

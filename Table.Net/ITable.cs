@@ -6,7 +6,7 @@
 
         void Refresh();
 
-        void Sort(IColumn column);
+        void Set(IColumn column);
 
         public (IColumn column, bool descending) CurrentSorting { get; }
     }

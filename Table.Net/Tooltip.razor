@@ -1,0 +1,17 @@
+﻿<i class="fas fa-fw fa-xs fa-question-circle mx-0 px-0" role="tooltip-@Placement">
+    <div class="position-relative">
+        <div class="bubble border rounded">
+            @((MarkupString)Content)
+        </div>
+    </div>
+</i>
+
+@code {
+
+    [Parameter]
+    public string Content { get; set; }
+
+    [Parameter]
+    public string Placement { get; set; }
+
+}

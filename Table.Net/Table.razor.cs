@@ -26,6 +26,9 @@ namespace Table.Net
         public EventCallback<TItem> OnRowClick { get; set; }
 
         [Parameter]
+        public int Sort { get; set; } = 1;
+
+        [Parameter]
         public bool Small { get; set; } = true;
 
         [Parameter]
@@ -90,7 +93,7 @@ namespace Table.Net
 
         public void Refresh() => StateHasChanged();
 
-        public void Sort(IColumn column)
+        public void Set(IColumn column)
         {
             if (column == defaultColumn)
             {
@@ -118,7 +121,7 @@ namespace Table.Net
                 }
                 else
                 {
-                    CurrentSorting = (column, false);
+                    CurrentSorting = (column, Sort == -1);
                 }
             }
 
