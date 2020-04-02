@@ -103,20 +103,41 @@ namespace Table.Net
             {
                 if (CurrentSorting.column == column)
                 {
-                    if (CurrentSorting.descending)
+                    if (Sort == -1)
                     {
-                        if (defaultColumn == null)
+                        if (!CurrentSorting.descending)
                         {
-                            CurrentSorting = (null, false);
+                            if (defaultColumn == null)
+                            {
+                                CurrentSorting = (null, false);
+                            }
+                            else
+                            {
+                                CurrentSorting = (defaultColumn, defaultColumn.Sort == -1);
+                            }
                         }
                         else
                         {
-                            CurrentSorting = (defaultColumn, defaultColumn.Sort == -1);
+                            CurrentSorting = (column, false);
                         }
                     }
                     else
                     {
-                        CurrentSorting = (column, true);
+                        if (CurrentSorting.descending)
+                        {
+                            if (defaultColumn == null)
+                            {
+                                CurrentSorting = (null, false);
+                            }
+                            else
+                            {
+                                CurrentSorting = (defaultColumn, defaultColumn.Sort == -1);
+                            }
+                        }
+                        else
+                        {
+                            CurrentSorting = (column, true);
+                        }
                     }
                 }
                 else

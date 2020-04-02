@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/github/license/BlazorExtensions/Storage.svg?longCache=true&style=flat-square)](https://github.com/pablofrommars/TableNet/blob/master/LICENSE)
-[![Package Version](https://img.shields.io/badge/nuget-v1.0.5-blue.svg?longCache=true&style=flat-square)](https://www.nuget.org/packages/Table.Net/1.0.5)
+[![Package Version](https://img.shields.io/badge/nuget-v1.0.6-blue.svg?longCache=true&style=flat-square)](https://www.nuget.org/packages/Table.Net/1.0.6)
 
 # Table.Net
 
