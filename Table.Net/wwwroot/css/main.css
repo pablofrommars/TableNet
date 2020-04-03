@@ -1,44 +1,44 @@
-﻿.table-net .clickable {
+﻿.table-net .table-net-clickable {
     cursor: pointer;
 }
 
-.table-net .sortable {
+.table-net .table-net-sortable {
     color: rgba(0,0,0,0.3);
 }
 
-    .table-net .sortable:hover {
+    .table-net .table-net-sortable:hover {
         color: inherit;
     }
 
-.table-net.table-dark .sortable,
-.table-net .thead-dark .sortable {
+.table-net.table-dark .table-net-sortable,
+.table-net .thead-dark .table-net-sortable {
     color: rgba(255,255,255,0.5);
 }
 
-    .table-net.table-dark .sortable:hover,
-    .table-net .thead-dark .sortable:hover {
+    .table-net.table-dark .table-net-sortable:hover,
+    .table-net .thead-dark .table-net-sortable:hover {
         color: inherit;
     }
 
-.table-net [role^="tooltip"] {
+.table-net [role^="table-net-tooltip"] {
     color: rgba(0,0,0,0.3);
 }
 
-    .table-net [role^="tooltip"]:hover {
+    .table-net [role^="table-net-tooltip"]:hover {
         color: inherit;
     }
 
-.table-net.table-dark [role^="tooltip"],
-.table-net .thead-dark [role^="tooltip"] {
+.table-net.table-dark [role^="table-net-tooltip"],
+.table-net .thead-dark [role^="table-net-tooltip"] {
     color: rgba(255,255,255,0.5);
 }
 
-    .table-net.table-dark [role^="tooltip"]:hover,
-    .table-net .thead-dark [role^="tooltip"]:hover {
+    .table-net.table-dark [role^="table-net-tooltip"]:hover,
+    .table-net .thead-dark [role^="table-net-tooltip"]:hover {
         color: inherit;
     }
 
-.table-net [role^="tooltip"] .bubble {
+.table-net [role^="table-net-tooltip"] .table-net-bubble {
     position: absolute;
     display: none;
     padding: 0.25em 0.5em;
@@ -50,19 +50,19 @@
     color: var(--white);
 }
 
-.table-net [role="tooltip-left"] .bubble {
+.table-net [role="table-net-tooltip-left"] .table-net-bubble {
     transform: translateX(calc(-100% + 1em));
 }
 
-.table-net [role="tooltip-center"] .bubble {
+.table-net [role="table-net-tooltip-center"] .table-net-bubble {
     transform: translateX(calc(-50% + 1em));
 }
 
-.table-net.table-dark [role^="tooltip"] .bubble {
+.table-net.table-dark [role^="table-net-tooltip"] .table-net-bubble {
     background-color: var(--white);
     color: var(--dark);
 }
 
-.table-net [role^="tooltip"]:hover .bubble {
+.table-net [role^="table-net-tooltip"]:hover .table-net-bubble {
     display: block;
 }

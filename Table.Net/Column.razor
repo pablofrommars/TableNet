@@ -1,4 +1,4 @@
-﻿<th @onclick=Click class=@(Sortable ? "clickable" : "")>
+﻿<th @onclick=Click class=@(Sortable ? "table-net-clickable" : "")>
     <div class="d-flex justify-content-between">
 
         @if (Sortable)
@@ -22,7 +22,7 @@
                     {
                         <Tooltip Content=@Tooltip Placement=@TooltipPlacement />
                     }
-                    <span class="ml-2 fas fa-fw fa-sort sortable"></span>
+                    <span class="ml-2 fas fa-fw fa-sort table-net-sortable"></span>
                 </div>
             }
         }
@@ -40,7 +40,7 @@
         @if (Filterable)
         {
         <div class="dropdown ml-2">
-            <a class="clickable" @onclick=@(_ => show = !show)><span class="fas fa-xs fa-fw fa-filter"></span></a>
+            <a class="table-net-clickable" @onclick=@(_ => show = !show)><span class="fas fa-xs fa-fw fa-filter"></span></a>
             <div class="dropdown-menu @(show ? "show" : "")">
                 <form>
                     <div class="dropdown-item" @onclick=All>

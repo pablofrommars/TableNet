@@ -23,7 +23,7 @@ else
                     {
                         if (OnRowClick.HasDelegate)
                         {
-                            <tr @key=item class="clickable" @onclick=@(async () => await OnRowClick.InvokeAsync(item))>@Row(item)</tr>
+                            <tr @key=item class="table-net-clickable" @onclick=@(async () => await OnRowClick.InvokeAsync(item))>@Row(item)</tr>
                         }
                         else
                         {
