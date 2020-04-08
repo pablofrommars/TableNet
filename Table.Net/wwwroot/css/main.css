@@ -1,68 +1,72 @@
-﻿.table-net .table-net-clickable {
-    cursor: pointer;
+﻿.table-net {
+    margin-bottom: 0 !important;
 }
 
-.table-net .table-net-sortable {
-    color: rgba(0,0,0,0.3);
-}
-
-    .table-net .table-net-sortable:hover {
-        color: inherit;
+    .table-net .table-net-clickable {
+        cursor: pointer;
     }
 
-.table-net.table-dark .table-net-sortable,
-.table-net .thead-dark .table-net-sortable {
-    color: rgba(255,255,255,0.5);
-}
-
-    .table-net.table-dark .table-net-sortable:hover,
-    .table-net .thead-dark .table-net-sortable:hover {
-        color: inherit;
+    .table-net .table-net-sortable {
+        color: rgba(0,0,0,0.3);
     }
 
-.table-net [role^="table-net-tooltip"] {
-    color: rgba(0,0,0,0.3);
-}
+        .table-net .table-net-sortable:hover {
+            color: inherit;
+        }
 
-    .table-net [role^="table-net-tooltip"]:hover {
-        color: inherit;
+    .table-net.table-dark .table-net-sortable,
+    .table-net .thead-dark .table-net-sortable {
+        color: rgba(255,255,255,0.5);
     }
 
-.table-net.table-dark [role^="table-net-tooltip"],
-.table-net .thead-dark [role^="table-net-tooltip"] {
-    color: rgba(255,255,255,0.5);
-}
+        .table-net.table-dark .table-net-sortable:hover,
+        .table-net .thead-dark .table-net-sortable:hover {
+            color: inherit;
+        }
 
-    .table-net.table-dark [role^="table-net-tooltip"]:hover,
-    .table-net .thead-dark [role^="table-net-tooltip"]:hover {
-        color: inherit;
+    .table-net [role^="table-net-tooltip"] {
+        color: rgba(0,0,0,0.3);
     }
 
-.table-net [role^="table-net-tooltip"] .table-net-bubble {
-    position: absolute;
-    display: none;
-    padding: 0.25em 0.5em;
-    white-space: nowrap;
-    top: calc(100% + 10px);
-    font-family: var(--font-family-sans-serif);
-    font-weight: normal;
-    background-color: var(--dark);
-    color: var(--white);
-}
+        .table-net [role^="table-net-tooltip"]:hover {
+            color: inherit;
+        }
 
-.table-net [role="table-net-tooltip-left"] .table-net-bubble {
-    transform: translateX(calc(-100% + 1em));
-}
+    .table-net.table-dark [role^="table-net-tooltip"],
+    .table-net .thead-dark [role^="table-net-tooltip"] {
+        color: rgba(255,255,255,0.5);
+    }
 
-.table-net [role="table-net-tooltip-center"] .table-net-bubble {
-    transform: translateX(calc(-50% + 1em));
-}
+        .table-net.table-dark [role^="table-net-tooltip"]:hover,
+        .table-net .thead-dark [role^="table-net-tooltip"]:hover {
+            color: inherit;
+        }
 
-.table-net.table-dark [role^="table-net-tooltip"] .table-net-bubble {
-    background-color: var(--white);
-    color: var(--dark);
-}
+    .table-net [role^="table-net-tooltip"] .table-net-bubble {
+        position: absolute;
+        display: none;
+        padding: 0.25em 0.5em;
+        white-space: nowrap;
+        top: calc(100% + 10px);
+        font-family: var(--font-family-sans-serif);
+        font-weight: normal;
+        background-color: var(--dark);
+        color: var(--white);
+    }
 
-.table-net [role^="table-net-tooltip"]:hover .table-net-bubble {
-    display: block;
-}
+    .table-net [role="table-net-tooltip-left"] .table-net-bubble {
+        transform: translateX(calc(-100% + 1em));
+    }
+
+    .table-net [role="table-net-tooltip-center"] .table-net-bubble {
+        transform: translateX(calc(-50% + 1em));
+    }
+
+    .table-net.table-dark [role^="table-net-tooltip"] .table-net-bubble {
+        background-color: var(--white);
+        color: var(--dark);
+    }
+
+    .table-net [role^="table-net-tooltip"]:hover .table-net-bubble {
+        display: block;
+    }
